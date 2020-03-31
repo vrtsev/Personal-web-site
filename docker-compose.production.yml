@@ -39,13 +39,16 @@ services:
       - '-c'
       - |
         yarn install
-        yarn run dev --hostname 0.0.0.0 -p 3500
+        yarn run build
+        yarn run start --hostname 0.0.0.0 -p 3500
     working_dir: /frontend
     ports:
       - 3500:3500
     env_file: .env
     volumes:
       - ./frontend:/frontend:cached
+    environment:
+      NODE_ENV=production
     networks:
       - default
 
