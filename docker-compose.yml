@@ -1,35 +1,35 @@
 version: '3.5'
 services:
-  backend:
-    container_name: personal_site_backend
-    build:
-      context: ./backend
-    command: bash -c "rm -rf tmp/pids/server.pid && rails server -b 0.0.0.0"
-    env_file: .env
-    working_dir: /backend
-    stdin_open: true
-    tty: true
-    volumes:
-      - ./backend:/backend:cached
-      - bundle-cache:/usr/local/bundle:cached
-    ports:
-      - 3000:3000
-    depends_on:
-      - database
-    networks:
-      - default
-      - web
+  # backend:
+  #   container_name: personal_site_backend
+  #   build:
+  #     context: ./backend
+  #   command: bash -c "rm -rf tmp/pids/server.pid && rails server -b 0.0.0.0"
+  #   env_file: .env
+  #   working_dir: /backend
+  #   stdin_open: true
+  #   tty: true
+  #   volumes:
+  #     - ./backend:/backend:cached
+  #     - bundle-cache:/usr/local/bundle:cached
+  #   ports:
+  #     - 3000:3000
+  #   depends_on:
+  #     - database
+  #   networks:
+  #     - default
+  #     - web
 
-  database:
-    container_name: personal_site_database
-    image: postgres:10.3-alpine
-    command: postgres -c 'max_connections=150'
-    ports:
-      - 5433:5432
-    env_file: .env
-    volumes:
-      # - .:/backend:cached
-      - db-data:/var/lib/postgresql/data:cached
+  # database:
+  #   container_name: personal_site_database
+  #   image: postgres:10.3-alpine
+  #   command: postgres -c 'max_connections=150'
+  #   ports:
+  #     - 5433:5432
+  #   env_file: .env
+  #   volumes:
+  #     # - .:/backend:cached
+  #     - db-data:/var/lib/postgresql/data:cached
 
   frontend:
     container_name: personal_site_frontend
