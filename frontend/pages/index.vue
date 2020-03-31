@@ -1,65 +1,152 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        personal_site
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+  <div class="container">
+    <div class="column photo-area">
+      <img src="/photo.png" alt="Vadym Riazantsev">
     </div>
-  </section>
+
+    <div class="column info-area">
+
+      <div class="content">
+        <h5>Ruby developer</h5>
+
+        <h2>Vadim Riazantsev</h2>
+
+        <p>
+          Creator of telegram app manager framework, mentor, in love with Ruby, Vue.js enthusiast. Write clean, scalable code.
+          Explore new technologies, experiment with code-libraries, architecture and performance
+        </p>
+
+        <div class="social-area">
+          <h3>Follow Me</h3>
+
+          <ul class="list">
+            <li><a href="https://github.com/vrtsev/"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/vrtsev/"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="mailto:v.rtsev@gmail.com"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="tg://resolve?domain=vadimrb"><i class="fa fa-telegram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
 export default {
-  components: {
-    AppLogo
-  }
+  layout: 'landing',
 }
 </script>
 
 <style>
 .container {
-  min-height: 100vh;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: row;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+.column {
+  width: 100%;
+}
+
+.column.photo-area {
+  flex: 0;
+}
+
+.column.info-area {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.column.photo-area img {
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  height: 100%;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.column.info-area .content {
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.links {
-  padding-top: 15px;
+.social-area .list {
+  list-style: none;
+  padding: 0;
+}
+
+.social-area .list li {
+  margin-right: 17px;
+  display: inline-block;
+}
+
+.social-area .list li a {
+  color: #cccccc;
+  font-size: 30px;
+  transition: all 300ms linear 0s;
+}
+
+.social-area .list li a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* TYPOGRAPHY */
+.info-area .content h5 {
+  font-size: 0.9em;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+  margin-bottom: 20px;
+}
+
+.info-area .content h2 {
+  margin-top: 0px;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: "Heebo", sans-serif;
+  line-height: 54px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.info-area .content p {
+  color: #777777;
+  font-family: "Roboto", sans-serif;
+  max-width: 680px;
+  font-size: 1em;
+  line-height: 26px;
+}
+
+.social-area h3 {
+  font-size: 1.8em;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+}
+/* END OF TYPOGRAPHY */
+
+@media screen and (max-aspect-ratio: 10/8) {
+  .container {
+    flex-direction: column;
+  }
+
+  .column.photo-area img {
+    width: 100%;
+  }
+
+  .column.info-area {
+    flex: 1;
+    height: initial;
+    overflow-y: initial;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .column.info-area .content {
+    justify-content: initial;
+  }
 }
 </style>
 
