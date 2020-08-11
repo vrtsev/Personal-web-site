@@ -12,7 +12,7 @@
         <h2>Vadim Riazantsev</h2>
 
         <p>
-          Creator of telegram app manager framework, mentor, in love with Ruby, Vue.js enthusiast. Write clean, scalable code.
+          Creator of telegram bot manager application, mentor, in love with Ruby, Vue.js enthusiast. Write clean, scalable code.
           Explore new technologies, experiment with code-libraries, architecture and performance
         </p>
 
