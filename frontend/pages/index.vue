@@ -39,7 +39,6 @@ export default {
 
 <style>
 .container {
-  background-color: #1f1f1f;
   color: #acb0b5;
   height: 100%;
   display: flex;
