@@ -39,6 +39,8 @@ export default {
 
 <style>
 .container {
+  background-color: #1f1f1f;
+  color: #acb0b5;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -82,19 +84,19 @@ export default {
 }
 
 .social-area .list li a {
-  color: #cccccc;
+  color: #9e9e9e;
   font-size: 30px;
   transition: all 300ms linear 0s;
 }
 
 .social-area .list li a:hover {
-  color: #0056b3;
+  color: #ffffff;
   text-decoration: underline;
 }
 
 /* TYPOGRAPHY */
 .info-area .content h5 {
-  color: #555555;
+  color: #787878;
   font-size: 0.9em;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -113,11 +115,15 @@ export default {
 }
 
 .info-area .content p {
-  color: #777777;
+  color: #787878;
   font-family: "Roboto", sans-serif;
   max-width: 680px;
   font-size: 1em;
   line-height: 26px;
+}
+
+.info-area .content p a {
+  color: #d1d1d1;
 }
 
 .social-area h3 {
