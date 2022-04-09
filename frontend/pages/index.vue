@@ -9,10 +9,10 @@
       <div class="content">
         <h5>Ruby developer</h5>
 
-        <h2>Vadim Riazantsev</h2>
+        <h2>Vadym Riazantsev</h2>
 
         <p>
-          Creator of telegram bot manager application, mentor, in love with Ruby, Vue.js enthusiast. Write clean, scalable code.
+          Creator of <a href="https://github.com/vrtsev/Telegrammer">Telegrammer bot manager application</a>, mentor, in love with Ruby lang, Vue.js enthusiast. Write clean, scalable code.
           Explore new technologies, experiment with code-libraries, architecture and performance
         </p>
 
@@ -23,7 +23,6 @@
             <li><a href="https://github.com/vrtsev/"><i class="fa fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/vrtsev/"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="mailto:v.rtsev@gmail.com"><i class="fa fa-envelope"></i></a></li>
-            <li><a href="tg://resolve?domain=vadimrb"><i class="fa fa-telegram"></i></a></li>
           </ul>
         </div>
       </div>
@@ -95,6 +94,7 @@ export default {
 
 /* TYPOGRAPHY */
 .info-area .content h5 {
+  color: #555555;
   font-size: 0.9em;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
